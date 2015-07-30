@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+#redball{
+position: absolute;
+left: 80px;
+top: 120px;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script>
+function moveright(){
+  var elem = $("#redball");
+  var pos = elem.offset();
+  pos.left = pos.left + 20;
+  elem.css({ top: pos.top+'px', left: pos.left+'px' });
+}
+function grow(){
+	var elem = $("#JesusRules");
+	elem.css("font-size","25px");
+}
+function fadeout(){
+	var elem = $("#JesusRules");
+	elem.fadeOut();
+}
+function fadein(){
+	var elem = $("#JesusRules");
+	elem.fadeIn();
+}
+
+</script>
+</head>
+<body>
+<p id="JesusRules">REDBALL RULES</p>
+<img id= 'redball' style="height:200px; width:200px;"src="C:\Users\Gina B\Downloads\test2.gif"/>
+<button onclick="moveright();">Slide To The Right</button>
+<button onclick="grow();">Growth</button>
+<button onclick="fadeout();">Vanish</button>
+<button onclick="fadein();">Appear</button>
+</body>
+</html>
+
